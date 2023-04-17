@@ -1,12 +1,12 @@
-import React from "react";
-import styles from "./styles/App.module.css";
+import { ReactElement } from 'react';
+import Routes from './routes';
 
-const App = () => {
-  return (
-    <div className={styles.app}>
-      <p className={styles.textStyle2}>Hacker news</p>
-    </div>
-  );
+const App = (): ReactElement => {
+	return (
+		<div>
+			<Routes />
+		</div>
+	);
 };
 
 export default App;
