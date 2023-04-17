@@ -1,0 +1,47 @@
+@import './variables.css';
+
+.app {
+    background-color: var(--white);
+}
+
+/* .Text-Style {
+  font-family: Baskerville;
+  font-size: 1.75rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  color: #3b3b3b;
+} */
+.textStyle2 {
+    font-family: Roboto;
+    font-size: 1rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
+    text-align: center;
+    color: var(--azure);
+  }
+  .Text-Style-4 {
+    font-family: Roboto;
+    font-size: 0.875rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: 0.25px;
+    color: #606060;
+  }
+  .Text-Style-3 {
+    font-family: Roboto;
+    font-size: 0.875rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: 0.25px;
+    color: var(--brownish-grey);
+  }
