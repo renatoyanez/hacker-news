@@ -9,7 +9,7 @@ type RouteListType = {
 
 export const RouteList: RouteListType = {
 	HOME: '/',
-	FAVES: '/faves',
+	FAVES: '/my-faves',
 };
 
 const Routes = (): ReactElement => {

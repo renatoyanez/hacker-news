@@ -1,10 +1,13 @@
 import { ReactElement } from 'react';
 import Routes from './routes';
+import { Layout } from 'components';
 
 const App = (): ReactElement => {
 	return (
 		<div>
-			<Routes />
+			<Layout>
+				<Routes />
+			</Layout>
 		</div>
 	);
 };
