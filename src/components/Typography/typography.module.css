@@ -45,3 +45,16 @@
 	color: var(--brownish-grey);
 	margin: 0;
 }
+
+.textStyle5 {
+	font-family: Roboto;
+	font-size: 1rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.75;
+	letter-spacing: normal;
+	text-align: center;
+	color: #606060;
+	margin: 0;
+}

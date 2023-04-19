@@ -12,12 +12,14 @@ const Layout = ({ children }: LayoutProps): ReactElement => {
 		<div>
 			<Header title={<Typography>HACKER NEWS</Typography>} />
 			<div className={styles.layout}>
-				<Tabs
-					data={[
-						{ title: 'All', path: RouteList.HOME },
-						{ title: 'My faves', path: RouteList.FAVES },
-					]}
-				/>
+				<div style={{ marginBottom: '4.375rem ' }}>
+					<Tabs
+						data={[
+							{ title: 'All', path: RouteList.HOME },
+							{ title: 'My faves', path: RouteList.FAVES },
+						]}
+					/>
+				</div>
 				{children}
 			</div>
 		</div>
