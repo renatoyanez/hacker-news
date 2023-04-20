@@ -1,6 +1,6 @@
-.container {
+/* .container {
 	border: 1px solid blue;
-}
+} */
 
 .cards {
 	display: flex;
@@ -8,15 +8,4 @@
 	justify-content: space-between;
 	flex-wrap: wrap;
 	/* width: 75%; */
-}
-
-.card {
-	border: 2px solid black;
-	border-radius: 10px;
-	overflow: hidden;
-	height: 400px;
-	min-width: 300px;
-	max-width: 400px;
-	margin: 0 3px 1em 3px;
-	flex: 0 1 25%;
 }

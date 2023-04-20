@@ -2,6 +2,12 @@
 
 .home {
 	min-width: 30rem;
-	border: 1px solid red;
+	/* border: 1px solid red; */
 	background-color: var(--white);
+}
+
+@media screen and (max-width: 400px) {
+	.home {
+		min-width: 3rem;
+	}
 }

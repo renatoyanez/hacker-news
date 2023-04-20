@@ -1,40 +1,85 @@
-import { useState, ChangeEvent } from 'react';
-import { Dropdown, NewsListSection } from 'components';
+import { useState, useEffect, useMemo } from 'react';
+import { Dropdown, NewsListSection, Pagination } from 'components';
 import { useGetNews } from 'hooks';
-import angular from 'assets/images/angular-logo.jpg';
-import vue from 'assets/images/vue-logo.jpg';
-import react from 'assets/images/react-logo.jpg';
+import { IHits } from 'interfaces';
+import { filterOptions } from 'helpers/filters';
 import styles from './home.module.css';
 
 const Home = () => {
+	// Get local storage in the first place
+	const getFilterLocalStorage = localStorage.getItem('filter');
+	// Set local storage after first render if it's not already
+	useEffect(() => {
+		if (!getFilterLocalStorage) {
+			localStorage.setItem('filter', '');
+		}
+	}, []);
+
 	const [placeholder] = useState('Select your news');
+	const [page, setPage] = useState(1);
+	const [query, setQuery] = useState(getFilterLocalStorage || '');
+	const [numberOfPages, setNumberOfPages] = useState(0);
 
-	const options = [
-		{ id: 2, name: 'Angular', image: angular, value: 'Angular' },
-		{ id: 3, name: 'React', image: react, value: 'React' },
-		{ id: 4, name: 'Vue', image: vue, value: 'Vue' },
-	];
+	const handlePages = (updatePage: number) => setPage(updatePage);
 
-	const [value, setValue] = useState('');
-
-	const handleChange = (event: ChangeEvent<HTMLSelectElement>) => {
-		setValue(event.target.value);
+	const handleQueryChange = (value: string) => {
+		localStorage.setItem('filter', value);
+		setQuery(value);
 	};
 	const { news, error, isLoading } = useGetNews({
-		query: 'reactjs',
-		page: 3,
+		query,
+		page,
 	});
-	// console.log(value);
+
+	const computeNews = useMemo(
+		() =>
+			news?.hits.map(hit => {
+				return {
+					objectID: hit.objectID,
+					created_at: hit.created_at,
+					author: hit.author,
+					story_title: hit.story_title,
+					story_url: hit.story_url,
+				};
+			}),
+		[news?.hits],
+	);
+
+	useEffect(() => {
+		if (news) {
+			setNumberOfPages(news?.nbPages);
+		}
+	}, [news]);
 
 	return (
 		<div className={styles.home}>
-			<Dropdown
-				options={options}
-				value={value}
-				placeholder={placeholder}
-				onChange={handleChange}
-			/>
-			<NewsListSection />
+			{!error ? (
+				<>
+					<Dropdown
+						options={filterOptions}
+						placeholder={placeholder}
+						onChange={handleQueryChange}
+					/>
+					<div style={{ marginBottom: '2.375rem' }} />
+					{!isLoading ? (
+						<>
+							<NewsListSection
+								news={computeNews || ([] as IHits[])}
+							/>
+							<Pagination
+								currentPage={page}
+								lastPage={numberOfPages}
+								maxLength={10}
+								setCurrentPage={handlePages}
+							/>
+						</>
+					) : (
+						<div>Loading...</div>
+					)}
+				</>
+			) : (
+				<div>Error</div>
+			)}
 		</div>
 	);
 };

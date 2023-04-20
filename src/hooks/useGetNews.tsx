@@ -53,13 +53,18 @@ export const useGetNews = ({ query, page }: IParams) =>
 			setNeedFetching(true);
 		}, [news]);
 
+		const run = () => {
+			loadNews().catch(() => setError(true));
+		};
+
 		useEffect(() => {
 			if (!needFetching) return;
-			loadNews().catch(() => setError(true));
+			run();
 		}, [query, page, needFetching]);
 
 		return {
 			// loadNews,
+			run,
 			news,
 			error,
 			isLoading,

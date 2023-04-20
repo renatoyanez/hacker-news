@@ -1,47 +1,44 @@
-/* eslint-disable */
-import {
-	ReactElement,
-	ChangeEvent,
-	useState,
-	useEffect,
-} from 'react';
+import { ReactElement, useState } from 'react';
 import { Typography } from 'components';
+import { filterOptions } from 'helpers/filters';
 import styles from './dropdown.module.css';
 
 interface Option {
 	id: number;
 	name: string;
 	image: string;
-	value?: string;
-	label?: string;
+	value: string;
 }
 
 interface DropdownProps {
-	value: string;
 	options: Option[];
-	onChange: (event: ChangeEvent<HTMLSelectElement>) => void;
+	onChange: (value: string) => void;
 	placeholder?: string;
 }
 
 const Dropdown = ({
-	value,
 	options,
 	placeholder,
 	onChange,
 }: DropdownProps): ReactElement => {
+	const getFilterLocalStorage = localStorage.getItem('filter');
+
+	const filterName = filterOptions.find(
+		filter => filter.value === getFilterLocalStorage,
+	)?.name;
+
 	const [showOptionList, setShowOptionList] = useState(false);
 	const [defaultSelectText, setDefaultSelectText] = useState(
-		placeholder || '',
+		filterName || placeholder || '',
 	);
-
-	const [optionsList, setOptionsList] = useState<Option[]>([]);
 
 	const handleListDisplay = () => {
 		setShowOptionList(prevState => !prevState);
 	};
 
-	const handleOptionClick = (name: string) => {
+	const handleOptionClick = (value: string, name: string) => {
 		setDefaultSelectText(name);
+		onChange(value);
 		setShowOptionList(false);
 	};
 
@@ -59,7 +56,6 @@ const Dropdown = ({
 					<Typography type="textStyle4">
 						{defaultSelectText}
 					</Typography>
-					{/* <i className={`${styles.arrow} down`}></i> */}
 				</div>
 				{showOptionList && (
 					<ul className={styles.selectOptions}>
@@ -68,7 +64,9 @@ const Dropdown = ({
 								<li
 									key={option.id}
 									className={styles.option}
-									onClick={() => handleOptionClick(option.name)}
+									onClick={() => {
+										handleOptionClick(option.value, option.name);
+									}}
 								>
 									<div className={styles.optionContainer}>
 										<img
@@ -91,4 +89,3 @@ const Dropdown = ({
 };
 
 export default Dropdown;
-/* eslint-disable */

@@ -1,0 +1,44 @@
+.pageLink {
+	position: relative;
+	display: inline-flex;
+	border-radius: 60%;
+	background-color: #ffffff;
+	padding: 10px 12px;
+	text-decoration: none;
+	cursor: pointer;
+	margin: 0 3px;
+}
+
+.pageLink:first-child {
+	border-radius: 1px;
+}
+
+.pageLink:last-child {
+	border-radius: 1px;
+}
+
+.pageLink:not(:first-child) {
+	margin-left: -1px;
+}
+
+.pageLink:hover,
+.pageLink:focus {
+	color: #0a58ca;
+	background-color: #e9ecef;
+}
+
+.pageLink:focus {
+	z-index: 3;
+}
+
+.active {
+	z-index: 2;
+	color: #ffffff;
+	border: 1px solid #0d6efd;
+	background-color: #0d6efd;
+}
+
+.pageLink.disabled {
+	color: #6c757d;
+	pointer-events: none;
+}
