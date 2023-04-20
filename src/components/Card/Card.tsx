@@ -11,31 +11,9 @@ import styles from './card.module.css';
 interface CardProps {
 	hit: IHits;
 	liked?: boolean;
-	// handleFavedHits: (hit: IHits) => void;
-	// storyTitle: string;
-	// storyUrl: string;
-	// date: string;
-	// author: string;
-	// faved?: boolean;
 }
 
-// const LikeSection = () => {
-// 	return (
-// 		<div className={styles.likeSection}>
-// 			<Like />
-// 		</div>
-// 	);
-// };
-
-const Card = ({
-	// storyTitle,
-	// date,
-	// author,
-	// storyUrl,
-	hit,
-	liked,
-}: // handleFavedHits,
-CardProps) => {
+const Card = ({ hit, liked }: CardProps) => {
 	const { handleFavedHits, favedHits } = useFaveNewsContext();
 
 	const [fromDate] = useState(dayjs().to(dayjs(hit.created_at)));
@@ -54,7 +32,6 @@ CardProps) => {
 							style={{
 								display: 'flex',
 								alignItems: 'center',
-								// marginBottom: '0.44rem',
 							}}
 						>
 							<div style={{ margin: '0.1rem 0.5rem 0 0' }}>

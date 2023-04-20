@@ -29,8 +29,7 @@ const App = (): ReactElement => {
 			faves.find(item => item.objectID === hit.objectID);
 
 		if (found) {
-			console.log('quitar');
-
+			// Take it out if it exists
 			const filtered =
 				faves && faves.length && faves.length > 0
 					? faves.filter(item => item.objectID !== found.objectID)
@@ -38,8 +37,7 @@ const App = (): ReactElement => {
 			setFavedHits([...filtered]);
 			localStorage.setItem('faves', JSON.stringify([...filtered]));
 		} else {
-			console.log('agregar');
-
+			// Add it if it doesn't
 			setFavedHits([...faves, hit]);
 			localStorage.setItem('faves', JSON.stringify([...faves, hit]));
 		}
