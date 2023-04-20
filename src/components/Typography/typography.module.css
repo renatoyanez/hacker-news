@@ -45,3 +45,40 @@
 	color: var(--brownish-grey);
 	margin: 0;
 }
+
+.textStyle5 {
+	font-family: Roboto;
+	font-size: 1rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.75;
+	letter-spacing: normal;
+	text-align: center;
+	color: #606060;
+	margin: 0;
+}
+
+.textStyle6 {
+	font-family: Roboto;
+	font-size: 0.688rem;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: #767676;
+	margin: 0;
+}
+
+.textStyle7 {
+	font-family: Roboto;
+	font-size: 0.875rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.43;
+	letter-spacing: 0.25px;
+	color: white;
+	margin: 0;
+}
