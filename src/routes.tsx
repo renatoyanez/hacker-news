@@ -17,7 +17,6 @@ const Routes = (): ReactElement => {
 		<Switch>
 			<Route path={RouteList.HOME} element={<Home />} />
 			<Route path={RouteList.FAVES} element={<Faves />} />
-			{/* <Route path="*" element={<NotFound />} /> */}
 		</Switch>
 	);
 };

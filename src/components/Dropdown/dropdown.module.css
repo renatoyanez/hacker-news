@@ -17,13 +17,6 @@
 	border-color: transparent transparent black transparent;
 }
 
-/* .selectedText::after {
-	border: solid black;
-	border-width: 0 3px 3px 0;
-	display: inline-block;
-	padding: 3px;
-} */
-
 .selectOptions {
 	position: absolute;
 	width: 100%;
