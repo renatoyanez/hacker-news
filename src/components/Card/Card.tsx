@@ -8,7 +8,7 @@ import { Typography } from 'components';
 import { useFaveNewsContext } from 'context/favesContext';
 import styles from './card.module.css';
 
-interface CardProps {
+export interface CardProps {
 	hit: IHits;
 	liked?: boolean;
 }
@@ -46,6 +46,7 @@ const Card = ({ hit, liked }: CardProps) => {
 				</div>
 
 				<div
+					data-testid="like-icon"
 					onClick={() =>
 						handleFavedHits(hit, favedHits || ([] as IHits[]))
 					}

@@ -3,7 +3,7 @@ import { Header, Typography, Tabs } from 'components';
 import { RouteList } from 'routes';
 import styles from './layout.module.css';
 
-interface LayoutProps {
+export interface LayoutProps {
 	children?: ReactNode | ReactNode[];
 }
 

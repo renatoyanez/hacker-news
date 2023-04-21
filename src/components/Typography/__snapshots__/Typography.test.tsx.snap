@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Typography renders correctly 1`] = `
+<p
+  className="textStyle2"
+>
+  test
+</p>
+`;

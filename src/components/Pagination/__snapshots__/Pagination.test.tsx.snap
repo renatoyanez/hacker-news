@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pagination renders correctly 1`] = `
+<nav
+  aria-label="Pagination"
+  className="pagination"
+>
+  <span
+    className="pageLink "
+  >
+    <p
+      className="textStyle3"
+    >
+      Previous
+    </p>
+  </span>
+  <a
+    aria-current="page"
+    className="pageLink active"
+    data-testid="number-of-page"
+    onClick={[Function]}
+  >
+    <p
+      className="textStyle7"
+    >
+      1
+    </p>
+  </a>
+  <a
+    className="pageLink "
+    data-testid="number-of-page"
+    onClick={[Function]}
+  >
+    <p
+      className="textStyle3"
+    >
+      2
+    </p>
+  </a>
+  <a
+    className="pageLink "
+    data-testid="number-of-page"
+    onClick={[Function]}
+  >
+    <p
+      className="textStyle3"
+    >
+      3
+    </p>
+  </a>
+  <a
+    className="pageLink "
+    data-testid="number-of-page"
+    onClick={[Function]}
+  >
+    <p
+      className="textStyle3"
+    >
+      4
+    </p>
+  </a>
+  <a
+    className="pageLink "
+    data-testid="number-of-page"
+    onClick={[Function]}
+  >
+    <p
+      className="textStyle3"
+    >
+      5
+    </p>
+  </a>
+  <a
+    className="pageLink "
+    data-testid="number-of-page"
+    onClick={[Function]}
+  >
+    <p
+      className="textStyle3"
+    >
+      6
+    </p>
+  </a>
+  <a
+    className="pageLink "
+    data-testid="number-of-page"
+    onClick={[Function]}
+  >
+    <p
+      className="textStyle3"
+    >
+      7
+    </p>
+  </a>
+  <a
+    className="pageLink "
+    data-testid="number-of-page"
+    onClick={[Function]}
+  >
+    <p
+      className="textStyle3"
+    >
+      8
+    </p>
+  </a>
+  <a
+    className="pageLink "
+    data-testid="number-of-page"
+    onClick={[Function]}
+  >
+    <p
+      className="textStyle3"
+    >
+      9
+    </p>
+  </a>
+  <a
+    className="pageLink "
+    onClick={[Function]}
+  >
+    <p
+      className="textStyle3"
+    >
+      Next
+    </p>
+  </a>
+</nav>
+`;
