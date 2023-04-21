@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabs renders correctly 1`] = `
+<div>
+  <button
+    className="selectedButton first"
+    onClick={[Function]}
+  >
+    <p
+      className="textStyle2"
+    >
+      All
+    </p>
+  </button>
+  <button
+    className="button second"
+    onClick={[Function]}
+  >
+    <p
+      className="textStyle5"
+    >
+      My faves
+    </p>
+  </button>
+</div>
+`;

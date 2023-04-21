@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout renders correctly 1`] = `
+<div>
+  <div
+    className="header"
+  >
+    <p
+      className="textStyle"
+    >
+      HACKER NEWS
+    </p>
+  </div>
+  <div
+    className="layout"
+  >
+    <div
+      style={
+        Object {
+          "marginBottom": "4.375rem ",
+        }
+      }
+    >
+      <div>
+        <button
+          className="selectedButton first"
+          onClick={[Function]}
+        >
+          <p
+            className="textStyle2"
+          >
+            All
+          </p>
+        </button>
+        <button
+          className="button second"
+          onClick={[Function]}
+        >
+          <p
+            className="textStyle5"
+          >
+            My faves
+          </p>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

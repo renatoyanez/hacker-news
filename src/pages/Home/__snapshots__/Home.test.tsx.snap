@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home renders correctly 1`] = `
+<div
+  className="home"
+>
+  <div>
+    <div
+      className="container"
+    >
+      <div
+        className="selectedText"
+        data-testid="dropdown-component"
+        onClick={[Function]}
+      >
+        <p
+          className="textStyle4"
+        >
+          Select your news
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "marginBottom": "2.375rem",
+      }
+    }
+  />
+  <div>
+    Loading...
+  </div>
+</div>
+`;

@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import styles from './header.module.css';
 
-interface HeaderProps {
+export interface HeaderProps {
 	title: ReactNode | ReactNode[];
 }
 

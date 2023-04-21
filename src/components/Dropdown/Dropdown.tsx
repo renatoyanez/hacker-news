@@ -3,14 +3,14 @@ import { Typography } from 'components';
 import { filterOptions } from 'helpers/filters';
 import styles from './dropdown.module.css';
 
-interface Option {
+export interface Option {
 	id: number;
 	name: string;
 	image: string;
 	value: string;
 }
 
-interface DropdownProps {
+export interface DropdownProps {
 	options: Option[];
 	onChange: (value: string) => void;
 	placeholder?: string;
@@ -46,6 +46,7 @@ const Dropdown = ({
 		<div>
 			<div className={styles.container}>
 				<div
+					data-testid="dropdown-component"
 					onClick={handleListDisplay}
 					className={
 						showOptionList
@@ -53,7 +54,7 @@ const Dropdown = ({
 							: styles.selectedText
 					}
 				>
-					<Typography type="textStyle4">
+					<Typography data-testid="selected-option" type="textStyle4">
 						{defaultSelectText}
 					</Typography>
 				</div>

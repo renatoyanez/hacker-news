@@ -4,7 +4,7 @@ import { Card } from 'components';
 import { useFaveNewsContext } from 'context/favesContext';
 import styles from './newsListSection.module.css';
 
-interface NewsListSectionProps {
+export interface NewsListSectionProps {
 	news?: IHits[];
 }
 

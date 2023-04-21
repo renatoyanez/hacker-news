@@ -4,12 +4,12 @@ import { useLocation } from 'react-router-dom';
 import { Typography } from 'components';
 import styles from './tabs.module.css';
 
-interface Elements {
+export interface Elements {
 	title: string;
 	path: string;
 }
 
-interface TabsProps {
+export interface TabsProps {
 	data: Elements[];
 }
 
